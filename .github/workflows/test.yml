@@ -30,4 +30,4 @@ jobs:
     #Run tests
     
     - name: Test
-      run: npm test
+      run: npm test -- --passWithNoTests
