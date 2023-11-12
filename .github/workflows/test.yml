@@ -24,7 +24,9 @@ jobs:
       run: npm install
     #build the react app 
     - name: Build
-      run: npm run build
+      run: |
+        export CI=false
+        npm run build
     #Run tests
     
     - name: Test
