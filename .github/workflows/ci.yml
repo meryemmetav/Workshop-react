@@ -21,4 +21,4 @@ jobs:
     - name: Build the Docker image
       run: docker build -t meryemmetav/workshop-react .
     - name: Push to Dockerhub
-      run: docker push meryemmetav/workshop-react:latest
+      run: docker push meryen/workshop-react:latest
