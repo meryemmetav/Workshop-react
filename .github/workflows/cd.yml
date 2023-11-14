@@ -1,0 +1,26 @@
+name: CD pipeline
+
+on:
+  workflow_run:
+    workflows: ["CI pipeline"]
+    types:
+      - completed
+
+jobs:
+
+  build:
+
+    runs-on: self-hosted
+
+    steps:
+   
+
+    - name: Pull Docker image
+      run: sudo docker pull meryemmetav/workshop-react:latest
+
+    - name: Delete Old docker container
+      run: sudo docker rm -f workshop-react-container || true
+
+    - name: Run Docker container 
+      run: sudo docker run -d -p 8080:8080 --name workshop-react-container meryemmetav/workshop-react
+     
