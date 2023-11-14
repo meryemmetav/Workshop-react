@@ -20,6 +20,6 @@ jobs:
       run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 #Build the docker image and push it to dockerhub      
     - name: Build the Docker image
-      run: docker build -t meryen/workshop-react .
+      run: docker build -t meryemmetav/workshop-react .
     - name: Push to Dockerhub
-      run: docker push meryen/workshop-react:latest
+      run: docker push meryemmetav/workshop-react:latest
