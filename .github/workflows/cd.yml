@@ -15,7 +15,7 @@ jobs:
     steps:
     # Step 1: Pull the latest version of the Docker image
     - name: Pull Docker image
-      run: sudo docker pull meryemmetav/workshop-react:latest
+      run: sudo docker pull meryemmetav/workshop-react:latest  
 
     # Step 2: Delete the old Docker container (if exists)
     - name: Delete Old docker container
